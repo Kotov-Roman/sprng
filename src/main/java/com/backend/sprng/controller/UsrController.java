@@ -27,6 +27,4 @@ public class UsrController {
     public Usr create(@RequestBody Usr usr) {
         return usrRepository.save(usr);
     }
-
-
 }
