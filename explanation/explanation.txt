@@ -1,0 +1,14 @@
+1."spring.factories" file in needed to register candidates for autoconfiguration,
+otherwise beans from classes marked with @AutoConfiguration will not be used
+
+
+2. @EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class})
+is needed to skip embedded db initialization, because it happens earlier
+than InMemDataSourceConfig provides DataSource bean ( and this bean is not created cuz of condition)
+
+3. @AutoConfiguration is used cuz then
+@AutoConfigureOrder(Ordered.HIGHEST_PRECEDENCE) starts working
+and beans definitions order can be managed, so bean with "fileDB" will be defined first if matches condition,
+and second bean for "memDb" will not be stored in BeansFactory
+
+

@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com/backend/sprng/config/FileDataSourceConfig,\
+com/backend/sprng/config/InMemDataSourceConfig

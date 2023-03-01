@@ -2,9 +2,14 @@ package com.backend.sprng;
 
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.SpringBootConfiguration;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
+@SpringBootConfiguration
+@ComponentScan(basePackages = { "com.backend.sprng" })
+@EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class})
 @OpenAPIDefinition
 public class SprngApplication {
 
