@@ -11,7 +11,6 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootConfiguration
 @ComponentScan(basePackages = {"com.backend.sprng"})
 @EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class})
-@OpenAPIDefinition
 @Slf4j
 public class SprngApplication {
 
