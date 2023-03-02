@@ -1,6 +1,5 @@
 package com.backend.sprng;
 
-import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.SpringBootConfiguration;
@@ -12,9 +11,9 @@ import org.springframework.context.annotation.ComponentScan;
 @ComponentScan(basePackages = {"com.backend.sprng"})
 @EnableAutoConfiguration(exclude = {DataSourceAutoConfiguration.class})
 @Slf4j
-public class SprngApplication {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(SprngApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 }
