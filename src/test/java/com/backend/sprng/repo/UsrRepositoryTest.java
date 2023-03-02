@@ -1,13 +1,13 @@
 package com.backend.sprng.repo;
 
-import com.backend.sprng.SprngApplicationTests;
+import com.backend.sprng.ApplicationTests;
 import com.backend.sprng.domain.Usr;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class UsrRepositoryTest extends SprngApplicationTests {
+public class UsrRepositoryTest extends ApplicationTests {
 
     @Autowired
     private UsrRepository usrRepository;
